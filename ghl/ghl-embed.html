@@ -1,0 +1,524 @@
+<!-- Miguel Egbert Duenas — AI Automation Portfolio · GoHighLevel Custom Code embed
+     Paste this whole block into ONE Custom Code / Custom HTML element.
+     Assets (images, video frames, 3D model) load from ASSET_BASE in the script below. -->
+<style>
+#med-portfolio{--bg:#0b0d10; --charcoal:#121519; --graphite:#1c2127; --line:rgba(200,230,240,.12);
+  --cyan:#29d3f2; --cyan-soft:rgba(41,211,242,.18); --white:#eef3f6; --muted:#8a97a3;
+  --pad:clamp(20px,5vw,72px);
+  --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;}
+#med-portfolio, #med-portfolio *{box-sizing:border-box;margin:0;padding:0}
+#med-portfolio{background:var(--bg);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+#med-portfolio{background:var(--bg);line-height:1.55}
+#med-portfolio a{color:inherit}
+#med-portfolio img{display:block;max-width:100%}
+#med-portfolio .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#med-portfolio .eyebrow{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+#med-portfolio .site-header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:22px var(--pad);transition:opacity .5s,filter .5s,background .4s,backdrop-filter .4s}
+#med-portfolio .site-header.scrolled{background:rgba(11,13,16,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+#med-portfolio .wordmark{font-weight:600;letter-spacing:.04em;text-decoration:none;font-size:.98rem}
+#med-portfolio .nav{display:flex;gap:clamp(14px,2.6vw,36px)}
+#med-portfolio .nav a{text-decoration:none;font-size:.86rem;color:#c9d3da;letter-spacing:.04em;position:relative}
+#med-portfolio .nav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--cyan);transform:scaleX(0);transition:transform .35s}
+#med-portfolio .nav a:hover::after,#med-portfolio .nav a:focus-visible::after{transform:scaleX(1)}
+#med-portfolio .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:999px;font-size:.88rem;
+  letter-spacing:.03em;text-decoration:none;transition:background .3s,border-color .3s,color .3s,box-shadow .3s}
+#med-portfolio .btn-ghost{border:1px solid rgba(238,243,246,.28);background:rgba(11,13,16,.25);backdrop-filter:blur(6px)}
+#med-portfolio .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+#med-portfolio .btn-solid{background:var(--white);color:#0b0d10;border:1px solid var(--white)}
+#med-portfolio .btn-solid:hover{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 32px rgba(41,211,242,.35)}
+#med-portfolio .btn-lg{padding:17px 34px;font-size:1rem}
+#med-portfolio :focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+#med-portfolio .hero{position:relative;height:520vh}
+#med-portfolio .hero-sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#med-portfolio .hero-media{position:absolute;inset:0;background:#07090b}
+#med-portfolio #heroCanvas,#med-portfolio .hero-video,#med-portfolio .hero-cutout{position:absolute;inset:0;width:100%;height:100%}
+#med-portfolio .hero-video{object-fit:cover;display:none}
+#med-portfolio .hero-cutout{object-fit:cover;z-index:3;pointer-events:none;will-change:opacity}
+#med-portfolio .headline{position:absolute;z-index:2;left:50%;top:clamp(70px,11vh,130px);transform:translateX(-50%);width:auto;text-align:center;
+  font-weight:800;font-size:17.2vw;line-height:.86;letter-spacing:-.02em;color:transparent;
+  background:linear-gradient(180deg,rgba(238,243,246,.96) 0%,rgba(190,225,235,.72) 70%,rgba(41,211,242,.35) 100%);
+  -webkit-background-clip:text;background-clip:text;pointer-events:none;white-space:nowrap;will-change:opacity,filter,transform}
+#med-portfolio .hero-vignette{position:absolute;inset:0;z-index:4;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 45%,transparent 55%,rgba(5,6,8,.65) 100%),linear-gradient(180deg,transparent 70%,rgba(11,13,16,.9) 100%)}
+#med-portfolio .hero-intro{position:absolute;z-index:6;left:0;right:0;bottom:clamp(36px,8vh,80px);display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 var(--pad);will-change:opacity,filter}
+#med-portfolio .hero-sub{max-width:520px;color:#c9d3da;margin-bottom:22px;font-size:1rem}
+#med-portfolio .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+#med-portfolio .scroll-hint{position:absolute;z-index:6;right:var(--pad);bottom:40px;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+#med-portfolio .scroll-hint span{width:1px;height:34px;background:linear-gradient(var(--cyan),transparent);animation:med-hint 2.2s infinite}
+@keyframes med-hint{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+#med-portfolio .stories{position:absolute;inset:0;z-index:5;pointer-events:none}
+#med-portfolio .story{position:absolute;top:50%;width:min(36vw,460px);display:flex;flex-direction:column;gap:18px;opacity:0;
+  transform:translateY(-50%);will-change:opacity,transform,filter}
+#med-portfolio .story[data-side="right"]{right:clamp(24px,7vw,120px)}
+#med-portfolio .story[data-side="left"]{left:clamp(24px,7vw,120px)}
+#med-portfolio .story img{width:min(22vw,280px);height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.55)) drop-shadow(0 0 30px rgba(41,211,242,.12))}
+#med-portfolio .story p{font-size:clamp(1.25rem,2vw,1.9rem);line-height:1.25;font-weight:500;letter-spacing:-.01em;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+#med-portfolio .three-zone{position:relative;z-index:2}
+#med-portfolio .panel{min-height:120vh;display:flex;align-items:center;padding:16vh var(--pad)}
+#med-portfolio .panel[data-side="left"]{justify-content:flex-start}
+#med-portfolio .panel[data-side="right"]{justify-content:flex-end}
+#med-portfolio .panel-copy{width:min(46vw,580px);opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s ease}
+#med-portfolio .panel-copy.wide{width:min(52vw,680px)}
+#med-portfolio .panel.in .panel-copy{opacity:1;transform:none}
+#med-portfolio .panel h2{font-size:clamp(1.9rem,3.6vw,3.1rem);line-height:1.08;letter-spacing:-.02em;font-weight:650;margin-bottom:22px;text-wrap:balance}
+#med-portfolio .panel p{color:#c3ccd3;margin-bottom:14px;max-width:56ch}
+#med-portfolio .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+#med-portfolio .chips li{border:1px solid var(--line);background:rgba(28,33,39,.6);padding:7px 14px;border-radius:999px;font-size:.82rem;color:#d8e1e7}
+#med-portfolio .stat-row{display:flex;gap:40px}
+#med-portfolio .stat-row strong{display:block;font-size:1.5rem;font-weight:650;color:var(--white)}
+#med-portfolio .stat-row span{font-size:.82rem;color:var(--muted)}
+#med-portfolio .services{list-style:none;display:grid;gap:2px;margin-top:8px;counter-reset:s}
+#med-portfolio .services li{padding:18px 0 16px;border-top:1px solid var(--line);counter-increment:s;display:grid;grid-template-columns:44px 1fr;column-gap:8px}
+#med-portfolio .services li::before{content:counter(s,decimal-leading-zero);color:var(--cyan);font-size:.8rem;padding-top:4px;grid-row:span 2}
+#med-portfolio .services h3{font-size:1.08rem;font-weight:600;margin-bottom:4px}
+#med-portfolio .services p{margin:0;font-size:.93rem}
+#med-portfolio .process{margin-top:44px}
+#med-portfolio .steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+#med-portfolio .steps li{border:1px solid var(--line);border-radius:14px;padding:16px;background:rgba(18,21,25,.6);font-weight:600;font-size:.95rem}
+#med-portfolio .steps span{display:block;color:var(--cyan);font-size:.75rem;margin-bottom:8px}
+#med-portfolio .steps small{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:6px;line-height:1.4}
+#med-portfolio .note{font-size:.85rem}
+#med-portfolio .cases{display:grid;gap:14px;margin-top:20px}
+#med-portfolio .case{border:1px solid var(--line);border-radius:18px;padding:22px 24px;background:linear-gradient(180deg,rgba(28,33,39,.7),rgba(18,21,25,.7));backdrop-filter:blur(6px)}
+#med-portfolio .client{font-size:.78rem!important;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)!important;margin-bottom:10px!important}
+#med-portfolio .case dl{display:grid;grid-template-columns:86px 1fr;gap:6px 12px;font-size:.92rem}
+#med-portfolio .case dt{color:var(--muted)}
+#med-portfolio .case dd{color:#d2dbe1}
+#med-portfolio .result{margin:14px 0 0!important;color:var(--white)!important;font-size:.95rem}
+#med-portfolio .result strong{font-size:1.25rem;color:var(--cyan);margin-right:6px}
+#med-portfolio .ph{display:inline-block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;border:1px dashed rgba(41,211,242,.7);color:var(--cyan);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:middle}
+#med-portfolio .final-cta{position:relative;z-index:2;min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14vh var(--pad);
+  background:radial-gradient(60% 50% at 50% 55%,rgba(41,211,242,.10),transparent 70%)}
+#med-portfolio .final-cta h2{font-size:clamp(2.2rem,6vw,5rem);line-height:1.02;letter-spacing:-.03em;font-weight:700;margin-bottom:20px;max-width:14ch}
+#med-portfolio .final-cta p{color:#c3ccd3;max-width:520px;margin-bottom:34px}
+#med-portfolio .site-footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:36px var(--pad);display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;background:var(--bg)}
+#med-portfolio .footer-links{display:flex;gap:24px;flex-wrap:wrap}
+#med-portfolio .footer-links a{color:#c3ccd3;text-decoration:none;font-size:.9rem}
+#med-portfolio .footer-links a:hover{color:var(--cyan)}
+#med-portfolio .copy{color:var(--muted);font-size:.8rem;width:100%}
+#med-portfolio .core-canvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:1;pointer-events:none;opacity:0}
+#med-portfolio .core-fallback{position:fixed;top:50%;width:min(40vw,520px);transform:translateY(-50%);z-index:1;pointer-events:none;opacity:0;display:none;border-radius:50%;
+  -webkit-mask-image:radial-gradient(circle,#000 55%,transparent 72%);mask-image:radial-gradient(circle,#000 55%,transparent 72%);transition:opacity .8s,left .8s,right .8s}
+@media (max-width:820px){#med-portfolio .nav{gap:14px}
+#med-portfolio .nav a{font-size:.78rem}
+#med-portfolio .site-header{padding:16px 18px;flex-direction:column;gap:8px;align-items:flex-start}
+#med-portfolio .hero{height:420vh}
+#med-portfolio .headline{top:120px}
+#med-portfolio .story{width:auto;left:20px!important;right:20px!important;top:auto;bottom:12vh;transform:none;flex-direction:row;align-items:center;gap:14px;
+    background:rgba(11,13,16,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px}
+#med-portfolio .story img{width:76px;flex:none}
+#med-portfolio .story p{font-size:1.05rem}
+#med-portfolio .panel{min-height:auto;padding:14vh 20px 10vh;justify-content:flex-start!important}
+#med-portfolio .panel-copy,#med-portfolio .panel-copy.wide{width:100%}
+#med-portfolio .steps{grid-template-columns:repeat(2,1fr)}
+#med-portfolio .scroll-hint{display:none}
+}
+@media (prefers-reduced-motion:reduce){#med-portfolio, #med-portfolio *,#med-portfolio *::before,#med-portfolio *::after{animation:none!important;transition-duration:.01ms!important}
+#med-portfolio .panel-copy{opacity:1;transform:none}
+}
+/* full-bleed: break out of the GHL column/container */
+#med-portfolio{position:relative;width:100vw;max-width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow-x:clip;text-align:left;font-size:16px;letter-spacing:normal;text-transform:none}
+#med-portfolio h1,#med-portfolio h2,#med-portfolio h3,#med-portfolio p,#med-portfolio li,#med-portfolio dd,#med-portfolio dt{font-family:var(--font);text-transform:none}
+#med-portfolio h2,#med-portfolio h3,#med-portfolio strong{color:var(--white)}
+#med-portfolio ol,#med-portfolio ul{list-style:none}
+#med-portfolio canvas,#med-portfolio video{max-width:none}
+#med-portfolio .hero-sticky.med-pin-fixed{position:fixed;top:0;left:0;width:100vw}
+#med-portfolio .hero-sticky.med-pin-end{position:absolute;top:auto;bottom:0;left:0;width:100%}
+/* if the script can't run (e.g. GHL editor preview), keep content readable */
+#med-portfolio:not(.med-js) .panel-copy{opacity:1;transform:none}
+#med-portfolio:not(.med-js) .story{position:relative;opacity:1;transform:none;top:auto;left:auto;right:auto;margin:40px auto;width:min(90vw,460px)}
+#med-portfolio:not(.med-js) .hero{height:auto}
+#med-portfolio:not(.med-js) .hero-sticky{position:relative;height:auto;min-height:100vh}
+#med-portfolio:not(.med-js) .stories{position:relative}
+#med-portfolio .med-hero-canvas{position:absolute;inset:0;width:100%;height:100%}
+#med-portfolio canvas,#med-portfolio img,#med-portfolio video{border:0}
+</style>
+<div id="med-portfolio">
+<header class="site-header" id="med-header">
+  <a class="wordmark" href="#" data-target="top" aria-label="Miguel Egbert Duenas, back to top">Miguel Egbert Duenas</a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#" data-target="med-cases">Work</a>
+    <a href="#" data-target="med-services">Services</a>
+    <a href="#" data-target="med-process">Process</a>
+    <a href="#" data-target="med-contact">Contact</a>
+  </nav>
+</header>
+<section class="hero" id="med-hero" aria-label="Introduction">
+  <div class="hero-sticky" id="med-hero-sticky">
+    <div class="hero-media">
+      <canvas class="med-hero-canvas" aria-hidden="true"></canvas>
+      <video class="hero-video" muted playsinline loop preload="none" aria-hidden="true"></video>
+      <h1 class="headline"><span class="sr-only">Miguel Egbert Duenas — </span>AUTOMATE</h1>
+      <canvas class="hero-cutout" aria-hidden="true"></canvas>
+      <div class="hero-vignette"></div>
+    </div>
+    <div class="hero-intro">
+      <p class="eyebrow">AI Automation Specialist</p>
+      <p class="hero-sub">Workflows, AI agents and integrations that take manual work off your team's plate.</p>
+      <div class="cta-row">
+        <a class="btn btn-ghost" href="#" data-target="med-cases">View Case Studies</a>
+        <a class="btn btn-solid" href="https://crm.ladder.marketing/widget/booking/HqxAEbyGBtNWSgSNa52w" target="_blank" rel="noopener">Book a Call</a>
+      </div>
+    </div>
+    <div class="stories">
+      <article class="story" data-side="right"><img data-src="img/obj_nodes.webp" alt="Glass workflow-node cluster" width="900" height="900" decoding="async" /><p>Every repetitive task is a decision waiting to be automated.</p></article>
+      <article class="story" data-side="left"><img data-src="img/obj_orb.webp" alt="Chrome AI-agent orb" width="900" height="900" decoding="async" /><p>AI agents shouldn't replace your team. They should give it back its time.</p></article>
+      <article class="story" data-side="right"><img data-src="img/obj_pipeline.webp" alt="Interlocking data pipeline" width="900" height="900" decoding="async" /><p>Clean data in, clear decisions out. The best systems run quietly in the background.</p></article>
+      <article class="story" data-side="left"><img data-src="img/obj_tiles.webp" alt="Stack of connected app tiles" width="900" height="900" decoding="async" /><p>Your tools already talk to each other. I make sure they say something useful.</p></article>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span>Scroll</div>
+  </div>
+</section>
+<div class="three-zone">
+  <section class="panel" id="med-about" data-side="left" aria-labelledby="med-aboutTitle"><div class="panel-copy">
+    <p class="eyebrow">About</p>
+    <h2 id="med-aboutTitle">I turn busywork into systems that run themselves.</h2>
+    <p>I'm Miguel, an AI automation specialist with 2 years of hands-on experience. I connect the tools you already pay for, build AI agents that answer and qualify leads, and replace copy-paste processes with workflows you can trust.</p>
+    <p>No fluff, no black boxes: you get documented automations, clear numbers and a team that gets its hours back.</p>
+    <ul class="chips" aria-label="Tool stack"><li>GoHighLevel</li><li>Zapier</li><li>Webhooks &amp; APIs</li><li>OpenAI API</li><li>Claude API</li></ul>
+    <div class="stat-row"><div><strong>2 yrs</strong><span>building automations</span></div><div><strong>End-to-end</strong><span>audit, build, hand-off</span></div></div>
+  </div></section>
+  <section class="panel" id="med-services" data-side="right" aria-labelledby="med-servicesTitle"><div class="panel-copy">
+    <p class="eyebrow">Services</p>
+    <h2 id="med-servicesTitle">What I build for you</h2>
+    <ol class="services">
+      <li><h3>Workflow automation</h3><p>Hand-offs, follow-ups and data entry that happen on their own, every time.</p></li>
+      <li><h3>AI agents &amp; chatbots</h3><p>Agents that answer, qualify and book around the clock, in your brand's voice.</p></li>
+      <li><h3>CRM setup &amp; integrations</h3><p>GoHighLevel pipelines and integrations that keep every lead and record in sync.</p></li>
+      <li><h3>RPA &amp; process audits</h3><p>I map where your time goes, then automate the steps that cost you most.</p></li>
+      <li><h3>Corporate AI training</h3><p>Practical sessions that get your team using AI safely and confidently.</p></li>
+    </ol>
+    <div class="process" id="med-process">
+      <p class="eyebrow">Process</p>
+      <ol class="steps">
+        <li><span>01</span>Audit<small>Find the manual work worth removing.</small></li>
+        <li><span>02</span>Design<small>Map the workflow and agree on the result.</small></li>
+        <li><span>03</span>Build<small>Ship, test and document every automation.</small></li>
+        <li><span>04</span>Measure<small>Track hours saved and keep improving.</small></li>
+      </ol>
+    </div>
+  </div></section>
+  <section class="panel" id="med-cases" data-side="left" aria-labelledby="med-casesTitle"><div class="panel-copy wide">
+    <p class="eyebrow">Case Studies</p>
+    <h2 id="med-casesTitle">Results, not just workflows</h2>
+    <p class="note">Numbers marked <span class="ph">placeholder</span> are examples to be replaced with real results.</p>
+    <div class="cases">
+      <article class="case"><p class="client">Real estate agency</p><dl><dt>Problem</dt><dd>New leads waited hours for a reply, and follow-up depended on whoever remembered.</dd><dt>Solution</dt><dd>GoHighLevel pipeline with an AI chat agent that replies instantly, qualifies and books viewings.</dd></dl>
+        <p class="result"><strong>[00] hrs → [00] min</strong> lead response time <span class="ph">placeholder</span></p></article>
+      <article class="case"><p class="client">E-commerce brand</p><dl><dt>Problem</dt><dd>Orders, invoices and stock were updated by hand across four different tools.</dd><dt>Solution</dt><dd>Zapier and webhook workflows that sync every order, invoice and stock change automatically.</dd></dl>
+        <p class="result"><strong>[00] hrs/week</strong> saved <span class="ph">placeholder</span></p></article>
+      <article class="case"><p class="client">Professional services firm</p><dl><dt>Problem</dt><dd>Client intake and weekly reports took the team days of manual work.</dd><dt>Solution</dt><dd>AI document intake with OpenAI and Claude APIs that drafts reports for a quick human review.</dd></dl>
+        <p class="result"><strong>[00]%</strong> operating cost reduced <span class="ph">placeholder</span></p></article>
+    </div>
+  </div></section>
+</div>
+<section class="final-cta" id="med-contact" aria-labelledby="med-ctaTitle">
+  <p class="eyebrow">Contact</p>
+  <h2 id="med-ctaTitle">Let's Automate Your Business</h2>
+  <p>Book a free audit. We'll find the work your team shouldn't be doing by hand, and what it's costing you.</p>
+  <a class="btn btn-solid btn-lg" href="https://crm.ladder.marketing/widget/booking/HqxAEbyGBtNWSgSNa52w" target="_blank" rel="noopener">Book a Free Automation Audit</a>
+</section>
+<footer class="site-footer">
+  <a class="wordmark" href="#" data-target="top">Miguel Egbert Duenas</a>
+  <div class="footer-links"><a href="mailto:miguel.egbert.28@gmail.com">miguel.egbert.28@gmail.com</a><a href="https://www.linkedin.com/in/miguel-d-51451a214/" target="_blank" rel="noopener">LinkedIn</a></div>
+  <p class="copy">© 2026 Miguel Egbert Duenas. All rights reserved.</p>
+</footer>
+<canvas class="core-canvas" aria-hidden="true"></canvas>
+<img class="core-fallback" data-src="img/core.webp" alt="" aria-hidden="true" />
+</div>
+
+<script type="module">
+/* ==========================================================================
+   ASSET_BASE — where the images, video frames and 3D model are hosted.
+   CHANGE THIS if your GitHub user/repo/branch differ. It must end with "/"
+   and point at the repo's docs/assets/ folder. Tip: after tagging a release,
+   use @v1.0.0 instead of @main so jsDelivr serves a fixed, cached version.
+   ========================================================================== */
+const ASSET_BASE = window.MED_ASSET_BASE || 'https://cdn.jsdelivr.net/gh/miguelegbert28/miguel-portfolio@main/docs/assets/';
+const BOOKING_URL = 'https://crm.ladder.marketing/widget/booking/HqxAEbyGBtNWSgSNa52w';
+
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.186.1/+esm';
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/loaders/GLTFLoader.js/+esm';
+import { DRACOLoader } from 'https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/loaders/DRACOLoader.js/+esm';
+import { RoomEnvironment } from 'https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/environments/RoomEnvironment.js/+esm';
+import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.3.27/+esm';
+
+const root = document.getElementById('med-portfolio');
+if (root && !root.dataset.init) { root.dataset.init = '1'; init(); }
+
+function init() {
+const A = (p) => ASSET_BASE + p;
+const $ = (s) => root.querySelector(s);
+const $$ = (s) => [...root.querySelectorAll(s)];
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const smooth = (t) => t * t * (3 - 2 * t);
+const mq = (q) => window.matchMedia(q).matches;
+const REDUCED = mq('(prefers-reduced-motion: reduce)');
+const MOBILE = mq('(max-width: 820px)') || mq('(hover: none) and (pointer: coarse)');
+const MODE = REDUCED ? 'static' : MOBILE ? 'video' : 'frames';
+const FRAMES = { count: 122, hi: 'frames/1280', lo: 'frames/960', poster: 'img/poster_1280.webp' };
+root.classList.add('med-js');
+root.dataset.mode = MODE;
+$$('[data-src]').forEach((im) => { im.src = A(im.dataset.src); });
+
+/* smooth scroll + nav (no hash routing, so GHL can't hijack it) */
+let lenis = null;
+if (!REDUCED) lenis = new Lenis({ lerp: 0.075, wheelMultiplier: 0.9, smoothWheel: true });
+$$('[data-target]').forEach((a) => a.addEventListener('click', (e) => {
+  e.preventDefault();
+  const id = a.dataset.target;
+  const el = id === 'top' ? root : document.getElementById(id);
+  if (!el) return;
+  if (lenis) lenis.scrollTo(el, { offset: id === 'med-process' ? -90 : 0, duration: 1.8 });
+  else el.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'start' });
+}));
+
+/* hero */
+const hero = $('#med-hero');
+const sticky = $('#med-hero-sticky');
+const canvas = $('.med-hero-canvas');
+const ctx = canvas.getContext('2d');
+const cutCanvas = $('.hero-cutout');
+const cutCtx = cutCanvas.getContext('2d');
+const video = $('.hero-video');
+const headline = $('.headline');
+const intro = $('.hero-intro');
+const header = $('#med-header');
+const hint = $('.scroll-hint');
+const stories = $$('.story');
+const STORY_CENTERS = [0.17, 0.35, 0.53, 0.71];
+const STORY_HALF = 0.088;
+const frames = new Array(FRAMES.count);
+const poster = new Image(); poster.src = A(FRAMES.poster);
+const cutSrc = new Image();
+cutSrc.src = A(innerWidth > 1300 ? 'img/cutout_frame_1920.webp' : 'img/cutout_frame_1280.webp');
+video.poster = A(FRAMES.poster);
+
+function loadFrames() {
+  const dir = innerWidth * Math.min(devicePixelRatio || 1, 1.5) > 1100 ? FRAMES.hi : FRAMES.lo;
+  const order = [];
+  for (let step = 16; step >= 1; step /= 2) for (let i = 0; i < FRAMES.count; i += step) if (!order.includes(i)) order.push(i);
+  let k = 0;
+  const next = () => {
+    if (k >= order.length) return;
+    const i = order[k++]; const im = new Image();
+    im.decoding = 'async';
+    im.onload = () => { frames[i] = im; next(); }; im.onerror = next;
+    im.src = A(`${dir}/f_${String(i + 1).padStart(3, '0')}.webp`);
+  };
+  for (let c = 0; c < 6; c++) next();
+}
+function nearestFrame(i) {
+  if (frames[i]) return frames[i];
+  for (let d = 1; d < FRAMES.count; d++) { if (frames[i - d]) return frames[i - d]; if (frames[i + d]) return frames[i + d]; }
+  return poster.complete ? poster : null;
+}
+let dirty = true;
+function sizeCanvases() {
+  const dpr = Math.min(devicePixelRatio || 1, MODE === 'frames' ? 1.5 : 1.25);
+  for (const c of [canvas, cutCanvas]) { c.width = Math.round(innerWidth * dpr); c.height = Math.round(innerHeight * dpr); }
+  dirty = true;
+}
+function drawCover(c, g, img, zoom, panX) {
+  if (!img || !img.width) return;
+  const cw = c.width, ch = c.height;
+  const s = Math.max(cw / img.width, ch / img.height) * zoom;
+  const w = img.width * s, h = img.height * s;
+  const maxShift = Math.max(0, (w - cw) / 2);
+  const x = (cw - w) / 2 + clamp(panX * cw * 0.16, -maxShift, maxShift);
+  const y = (ch - h) / 2 + (zoom - 1) * h * 0.06;
+  g.clearRect(0, 0, cw, ch); g.drawImage(img, x, y, w, h);
+}
+let target = 0, prog = 0, lastFrame = -1, pan = 0, zoom = 1;
+function heroProgress() { const r = hero.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); }
+if (MODE === 'frames') loadFrames();
+if (MODE === 'video') {
+  canvas.style.display = 'none'; video.style.display = 'block';
+  video.src = A('video/hero_loop.mp4'); video.preload = 'auto'; video.load();
+}
+
+/* sticky fallback: some page builders put overflow:hidden on a parent, which breaks position:sticky */
+let pinMode = 'sticky';
+function pinHero() {
+  const r = hero.getBoundingClientRect();
+  if (pinMode === 'sticky') {
+    if (r.top < -40 && r.bottom > innerHeight + 40 && Math.abs(sticky.getBoundingClientRect().top) > 4) pinMode = 'js';
+    else return;
+  }
+  sticky.classList.toggle('med-pin-fixed', r.top <= 0 && r.bottom > innerHeight);
+  sticky.classList.toggle('med-pin-end', r.bottom <= innerHeight);
+}
+
+/* 3D automation core */
+const zone = $('.three-zone');
+const panels = $$('.panel');
+const cta = $('#med-contact');
+const coreCanvas = $('.core-canvas');
+const fallback = $('.core-fallback');
+let three = null, pulse = 0;
+const io = new IntersectionObserver((ents) => ents.forEach((e) => {
+  if (e.isIntersecting && !e.target.classList.contains('in')) { e.target.classList.add('in'); pulse = 1; }
+  else if (e.isIntersecting) pulse = Math.max(pulse, 0.6);
+}), { threshold: MOBILE ? 0.12 : 0.3 });
+panels.forEach((p) => io.observe(p));
+function webglOK() { try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch { return false; } }
+function initThree() {
+  const renderer = new THREE.WebGLRenderer({ canvas: coreCanvas, antialias: !MOBILE, alpha: true, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, MOBILE ? 1.25 : 1.75));
+  renderer.setSize(innerWidth, innerHeight, false);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const scene = new THREE.Scene();
+  scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
+  scene.environmentIntensity = 0.55;
+  const camera = new THREE.PerspectiveCamera(32, innerWidth / innerHeight, 0.1, 100); camera.position.set(0, 0.2, 9);
+  const key = new THREE.DirectionalLight(0xdff6ff, 2.2); key.position.set(4, 5, 6); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x29d3f2, 3.0); rim.position.set(-6, 1, -4); scene.add(rim);
+  const fill = new THREE.PointLight(0x29d3f2, 6, 8, 2); scene.add(fill);
+  const rig = new THREE.Group(); scene.add(rig);
+  const spin = new THREE.Group(); rig.add(spin);
+  const emissive = [], gears = [];
+  const draco = new DRACOLoader().setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/libs/draco/gltf/');
+  new GLTFLoader().setDRACOLoader(draco).load(A('model/automation_core.glb'), (gltf) => {
+    const r0 = gltf.scene; const cache = {};
+    r0.traverse((o) => {
+      if (/Gear/.test(o.name) && o.isMesh) gears.push(o);
+      if (!o.isMesh) return;
+      const name = o.material.name || '';
+      if (!cache[name]) {
+        let nm = o.material;
+        if (name.includes('BrushedSteel')) nm = new THREE.MeshPhysicalMaterial({ color: 0xa3a9b0, metalness: 1, roughness: 0.3, anisotropy: 0.75, anisotropyRotation: Math.PI / 2, clearcoat: 0.2 });
+        else if (name.includes('Graphite')) nm = new THREE.MeshPhysicalMaterial({ color: 0x15181c, metalness: 0.9, roughness: 0.42, anisotropy: 0.5 });
+        else if (name.includes('FrostedGlass')) nm = MOBILE
+          ? new THREE.MeshPhysicalMaterial({ color: 0xbfe9f4, roughness: 0.25, transparent: true, opacity: 0.28, depthWrite: false })
+          : new THREE.MeshPhysicalMaterial({ color: 0xd9f4fb, roughness: 0.32, transmission: 1, thickness: 0.25, ior: 1.45, attenuationColor: new THREE.Color(0x8fdcf0), attenuationDistance: 1.2, transparent: true });
+        else if (name.includes('Emissive')) {
+          const base = name.includes('Core') ? 4.2 : name.includes('Node') ? 3.2 : 2.4;
+          const col = name.includes('Core') ? 0xcff6ff : name.includes('Node') ? 0x9ff0ff : 0x29d3f2;
+          nm = new THREE.MeshStandardMaterial({ color: 0x0a1418, emissive: col, emissiveIntensity: base, roughness: 0.4 });
+          nm.userData.base = base; emissive.push(nm);
+        }
+        cache[name] = nm;
+      }
+      o.material = cache[name];
+    });
+    const sph = new THREE.Box3().setFromObject(r0).getBoundingSphere(new THREE.Sphere());
+    r0.position.sub(sph.center); spin.scale.setScalar(2.05 / sph.radius); spin.add(r0);
+    three.ready = true;
+  }, undefined, () => { three = null; fallback.style.display = 'block'; });
+  three = { renderer, scene, camera, rig, spin, emissive, gears, fill, ready: false, cur: { x: 2, y: 0, s: 0.6, op: 0, rx: 0.3, ry: 0 } };
+}
+if (!REDUCED && webglOK()) initThree(); else fallback.style.display = 'block';
+
+function sectionTargets() {
+  if (MOBILE) return [{ x: 0.9, y: 1.2, s: 0.62 }, { x: -0.9, y: 1.2, s: 0.55 }, { x: 0.9, y: 1.3, s: 0.6 }];
+  const X = Math.min(2.2, 1.25 * (innerWidth / innerHeight));
+  return [{ x: X, y: 0, s: 0.86 }, { x: -X, y: 0.05, s: 0.72 }, { x: X * 1.02, y: -0.05, s: 0.8 }];
+}
+function zoneState() {
+  const vh = innerHeight;
+  const centers = panels.map((p) => { const r = p.getBoundingClientRect(); return r.top + r.height / 2 - vh / 2; });
+  let s = 0;
+  if (centers[0] >= 0) s = -centers[0] / (panels[0].offsetHeight * 0.9);
+  else if (centers.at(-1) <= 0) s = centers.length - 1 - centers.at(-1) / panels.at(-1).offsetHeight;
+  else for (let i = 0; i < centers.length - 1; i++) if (centers[i] <= 0 && centers[i + 1] > 0) { s = i - centers[i] / (centers[i + 1] - centers[i]); break; }
+  const fadeIn = clamp((vh - zone.getBoundingClientRect().top) / (vh * 0.7));
+  const fadeOut = clamp((cta.getBoundingClientRect().top - vh * 0.45) / (vh * 0.45));
+  return { s, op: smooth(fadeIn) * smooth(fadeOut) * (MOBILE ? 0.32 : 1), out: 1 - fadeOut };
+}
+function fitHeadline() {
+  headline.style.fontSize = '100px';
+  const w = headline.scrollWidth || 1;
+  headline.style.fontSize = `${Math.floor((100 * innerWidth * 0.9) / w)}px`;
+}
+function onResize() {
+  fitHeadline(); sizeCanvases();
+  if (three) { three.renderer.setSize(innerWidth, innerHeight, false); three.camera.aspect = innerWidth / innerHeight; three.camera.updateProjectionMatrix(); }
+}
+addEventListener('resize', onResize); onResize();
+document.fonts && document.fonts.ready.then(fitHeadline);
+[poster, cutSrc].forEach((im) => im.addEventListener('load', () => (dirty = true)));
+
+let last = performance.now(), time = 0;
+function raf(now) {
+  const dt = Math.min(0.05, (now - last) / 1000); last = now; time += dt;
+  if (lenis) lenis.raf(now);
+  pinHero();
+  target = heroProgress();
+  prog += (target - prog) * (REDUCED ? 1 : 1 - Math.exp(-dt / 0.22));
+  if (Math.abs(target - prog) < 0.00005) prog = target;
+  const p = prog;
+  const io_ = 1 - smooth(clamp(p / 0.045)), blur = (1 - io_) * 14;
+  intro.style.opacity = io_; intro.style.filter = REDUCED ? '' : `blur(${blur}px)`; intro.style.pointerEvents = io_ < 0.5 ? 'none' : '';
+  headline.style.opacity = io_; headline.style.filter = REDUCED ? '' : `blur(${blur}px)`;
+  headline.style.transform = `translateX(-50%) translateY(${-p * 600}px) scale(${1 + (1 - io_) * 0.04})`;
+  cutCanvas.style.opacity = io_; hint.style.opacity = io_;
+  const pastHero = hero.getBoundingClientRect().bottom <= innerHeight * 0.5;
+  const hOp = pastHero ? 1 : io_;
+  header.style.opacity = hOp; header.style.filter = REDUCED || hOp > 0.99 ? '' : `blur(${(1 - hOp) * 10}px)`;
+  header.style.pointerEvents = hOp < 0.4 ? 'none' : '';
+  header.classList.toggle('scrolled', pastHero);
+  const rootR = root.getBoundingClientRect();
+  header.style.visibility = rootR.bottom < 60 || rootR.top > innerHeight ? 'hidden' : '';
+
+  let panT = 0, zoomT = 1;
+  stories.forEach((el, i) => {
+    const t = (p - STORY_CENTERS[i]) / STORY_HALF, o = clamp((1 - Math.abs(t)) * 2.6);
+    const side = el.dataset.side === 'right' ? 1 : -1;
+    el.style.opacity = o;
+    if (!REDUCED) {
+      el.style.filter = `blur(${(1 - o) * 8}px)`;
+      el.style.transform = MOBILE ? `translateY(${t * -24}px)` : `translateY(calc(-50% + ${t * -60}px))`;
+      el.firstElementChild.style.transform = `translateY(${t * -26}px) rotate(${t * 4}deg)`;
+    }
+    panT += -side * o; zoomT = Math.max(zoomT, 1 + 0.32 * o);
+  });
+  if (MODE === 'frames') {
+    pan += (panT - pan) * (1 - Math.exp(-dt / 0.35)); zoom += (zoomT - zoom) * (1 - Math.exp(-dt / 0.35));
+    const fi = Math.round(clamp(p / 0.94) * (FRAMES.count - 1));
+    if (fi !== lastFrame || dirty || Math.abs(panT - pan) > 0.0005 || Math.abs(zoomT - zoom) > 0.0005) { drawCover(canvas, ctx, nearestFrame(fi), zoom, pan); lastFrame = fi; }
+  } else if (MODE === 'video') {
+    if (p > 0.012 && video.paused) video.play().catch(() => {});
+    else if (p < 0.002 && !video.paused) { video.pause(); video.currentTime = 0; }
+  } else if (MODE === 'static' && dirty) drawCover(canvas, ctx, poster, 1, 0);
+  if (dirty && cutSrc.complete) drawCover(cutCanvas, cutCtx, cutSrc, 1, 0);
+  dirty = false;
+
+  const z = zoneState();
+  if (three) {
+    const tg = sectionTargets();
+    const s = clamp(z.s, -1, 2.999);
+    const i0 = Math.max(0, Math.floor(s)), i1 = Math.min(2, i0 + 1), f = s < 0 ? 0 : smooth(clamp(s - i0));
+    const a = tg[i0], b = tg[i1], c = three.cur, kk = 1 - Math.exp(-dt / 0.45);
+    const tx = a.x + (b.x - a.x) * f;
+    const ty = a.y + (b.y - a.y) * f + (s < 0 ? s * 1.4 : 0) - z.out * 0.6;
+    const ts = (a.s + (b.s - a.s) * f) * (0.75 + 0.25 * z.op) * (1 - z.out * 0.35);
+    c.x += (tx - c.x) * kk; c.y += (ty - c.y) * kk; c.s += (ts - c.s) * kk;
+    c.op += (z.op - c.op) * (1 - Math.exp(-dt / 0.25));
+    if (z.op < c.op) c.op = Math.max(z.op, c.op - dt * 1.5);
+    if (z.op === 0 && c.op < 0.01) c.op = 0;
+    c.ry += ((s * 2.1 + time * 0.12) - c.ry) * kk; c.rx += ((0.32 + Math.sin(s * 1.7) * 0.25) - c.rx) * kk;
+    coreCanvas.style.opacity = c.op.toFixed(3);
+    if (c.op > 0.002 && three.ready) {
+      three.rig.position.set(c.x, c.y, 0); three.rig.scale.setScalar(c.s);
+      three.rig.rotation.set(c.rx, c.ry, Math.sin(time * 0.3) * 0.04);
+      three.gears.forEach((g, idx) => g.rotateY(dt * (idx < 3 ? (idx % 2 ? 0.05 : -0.04) : (idx % 2 ? 0.35 : -0.28))));
+      pulse *= Math.exp(-dt * 1.3);
+      const glow = 0.75 + pulse * 1.8 + Math.sin(time * 2.2) * 0.12;
+      three.emissive.forEach((m) => (m.emissiveIntensity = m.userData.base * glow));
+      three.fill.intensity = 4 + pulse * 10;
+      three.renderer.render(three.scene, three.camera);
+    }
+  } else if (fallback.style.display === 'block') {
+    const right = Math.round(clamp(z.s, 0, 2)) % 2 === 0;
+    fallback.style.opacity = (z.op * 0.9).toFixed(3);
+    fallback.style.left = right ? 'auto' : '5vw'; fallback.style.right = right ? '5vw' : 'auto';
+  }
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+}
+</script>

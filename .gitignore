@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+.vite/
+# large/temporary generation files (kept out of the repo)
+gen/
+*.blend1

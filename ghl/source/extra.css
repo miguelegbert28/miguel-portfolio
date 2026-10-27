@@ -1,0 +1,16 @@
+/* full-bleed: break out of the GHL column/container */
+#med-portfolio{position:relative;width:100vw;max-width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow-x:clip;text-align:left;font-size:16px;letter-spacing:normal;text-transform:none}
+#med-portfolio h1,#med-portfolio h2,#med-portfolio h3,#med-portfolio p,#med-portfolio li,#med-portfolio dd,#med-portfolio dt{font-family:var(--font);text-transform:none}
+#med-portfolio h2,#med-portfolio h3,#med-portfolio strong{color:var(--white)}
+#med-portfolio ol,#med-portfolio ul{list-style:none}
+#med-portfolio canvas,#med-portfolio video{max-width:none}
+#med-portfolio .hero-sticky.med-pin-fixed{position:fixed;top:0;left:0;width:100vw}
+#med-portfolio .hero-sticky.med-pin-end{position:absolute;top:auto;bottom:0;left:0;width:100%}
+/* if the script can't run (e.g. GHL editor preview), keep content readable */
+#med-portfolio:not(.med-js) .panel-copy{opacity:1;transform:none}
+#med-portfolio:not(.med-js) .story{position:relative;opacity:1;transform:none;top:auto;left:auto;right:auto;margin:40px auto;width:min(90vw,460px)}
+#med-portfolio:not(.med-js) .hero{height:auto}
+#med-portfolio:not(.med-js) .hero-sticky{position:relative;height:auto;min-height:100vh}
+#med-portfolio:not(.med-js) .stories{position:relative}
+#med-portfolio .med-hero-canvas{position:absolute;inset:0;width:100%;height:100%}
+#med-portfolio canvas,#med-portfolio img,#med-portfolio video{border:0}
